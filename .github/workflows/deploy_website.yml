@@ -15,6 +15,11 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v4.0.3
 
+    - name: Install dependencies
+      run: |
+        cd unconference-2025/
+        npm install docusaurus
+
     - name: Build website
       run: |
         cd unconference-2025/

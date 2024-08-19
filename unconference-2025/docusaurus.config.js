@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'DISC Unconference 2025',
   tagline: 'São Paulo, Brazil and Online',
-  favicon: 'img/DISC-stacked-RBG-TL-border.png',
+  favicon: 'img/DISC-RGB-Icon.svg',
 
   // Set the production url of your site here
   url: 'https://numfocus.github.io/',
@@ -43,23 +43,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          // editUrl:
+          //   'https://github.com/numfocus/disc-unconference-2025/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -74,70 +59,55 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'DISC Unconference 2025',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'DISC Logo',
+          src: 'img/DISC-RGB-Icon.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
             position: 'left',
-            label: 'Tutorial',
+            docId: 'about',
+            label: 'About',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            type: 'doc',
+            position: 'left',
+            docId: 'sponsors',
+            label: 'Sponsorship',
           },
+          {
+            position: 'left',
+            label: 'Code of Conduct',
+            href: 'https://numfocus.org/code-of-conduct',
+            target: '_blank',
+          },
+          {
+            position: 'left',
+            label: 'Donate',
+            href: 'https://app.hubspot.com/payments/purchase/hscs_NsUcNj1rgBQKjlyOgRDvueb6Mlnz7jaCJJR7N9qCMGXiEaIUTulYLT0SVki3qrPG?referrer=PAYMENT_LINK',
+            target: '_blank',
+          }
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+            label: 'LinkedIn',
+            to: 'https://www.linkedin.com/company/numfocus',
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
+            label: 'GitHub',
+            href: 'https://github.com/numfocus/disc-unconference-2025',
           },
           {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+            label: 'DISC Unconference 2023 Projects',
+            href: 'https://numfocus.github.io/disc-unconference-2023-projects',
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} NumFOCUS DISC Committee. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
